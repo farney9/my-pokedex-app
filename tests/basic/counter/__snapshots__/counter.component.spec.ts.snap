@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CounterComponent  debe hacer match con el snapshot  1`] = `
+<div
+  id="root1"
+>
+  <h1>
+    Counter 10 
+  </h1>
+  <hr />
+  <button
+    class="btn btn-primary mx-1"
+  >
+    +1
+  </button>
+  <button
+    class="btn btn-primary mx-1"
+  >
+    -1
+  </button>
+</div>
+`;
+
+exports[`CounterComponent Debe hacer match con el snapshot  1`] = `
+<div
+  id="root2"
+>
+  <h1>
+    Counter 10 
+  </h1>
+  <hr />
+  <button
+    class="btn btn-primary mx-1"
+  >
+    +1
+  </button>
+  <button
+    class="btn btn-primary mx-1"
+  >
+    -1
+  </button>
+</div>
+`;
+
+exports[`CounterComponent debe hacer match con el snapshot  1`] = `
+<div
+  id="root1"
+>
+  <h1>
+    Counter 10 
+  </h1>
+  <hr />
+  <button
+    class="btn btn-primary mx-1"
+  >
+    +1
+  </button>
+  <button
+    class="btn btn-primary mx-1"
+  >
+    -1
+  </button>
+</div>
+`;
+
+exports[`CounterComponent debe hacer match con el snapshot  2`] = `
+<div
+  id="root2"
+>
+  <h1>
+    Counter 10 
+  </h1>
+  <hr />
+  <button
+    class="btn btn-primary mx-1"
+  >
+    +1
+  </button>
+  <button
+    class="btn btn-primary mx-1"
+  >
+    -1
+  </button>
+</div>
+`;
+
+exports[`CounterComponent debe hacer match con el snapshot 1`] = `
+<div
+  id="root1"
+>
+  <h1>
+    Counter 10 
+  </h1>
+  <hr />
+  <button
+    class="btn btn-primary mx-1"
+  >
+    +1
+  </button>
+  <button
+    class="btn btn-primary mx-1"
+  >
+    -1
+  </button>
+</div>
+`;
+
+exports[`CounterComponent increaseBy  1`] = `
+<div
+  id="root2"
+>
+  <h1>
+    Counter 10 
+  </h1>
+  <hr />
+  <button
+    class="btn btn-primary mx-1"
+  >
+    +1
+  </button>
+  <button
+    class="btn btn-primary mx-1"
+  >
+    -1
+  </button>
+</div>
+`;
+
+exports[`CounterComponent increaseBy Debe hacer match con el snapshot  1`] = `
+<div
+  id="root2"
+>
+  <h1>
+    Counter 10 
+  </h1>
+  <hr />
+  <button
+    class="btn btn-primary mx-1"
+  >
+    +1
+  </button>
+  <button
+    class="btn btn-primary mx-1"
+  >
+    -1
+  </button>
+</div>
+`;
+
+exports[`CounterComponent increaseBy debe hacer match con el snapshot  1`] = `
+<div
+  id="root2"
+>
+  <h1>
+    Counter 10 
+  </h1>
+  <hr />
+  <button
+    class="btn btn-primary mx-1"
+  >
+    +1
+  </button>
+  <button
+    class="btn btn-primary mx-1"
+  >
+    -1
+  </button>
+</div>
+`;
+
+exports[`CounterComponent increaseBy debe incrementar basado en el argumento 1`] = `
+<div
+  id="root2"
+>
+  <h1>
+    Counter 10 
+  </h1>
+  <hr />
+  <button
+    class="btn btn-primary mx-1"
+  >
+    +1
+  </button>
+  <button
+    class="btn btn-primary mx-1"
+  >
+    -1
+  </button>
+</div>
+`;
