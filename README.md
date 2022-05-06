@@ -1,4 +1,4 @@
 # My Pokedex App
 
-* [Pasos para configurar Jest en Angular](https://gist.github.com/Klerith/ca4573d13844f53af3ff68846a238fc3)
+* Live on [https://farney9.github.io/my-pokedex-app](https://farney9.github.io/my-pokedex-app)
 
