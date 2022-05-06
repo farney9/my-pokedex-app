@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --main-color: #1d7024;
+    --gray-color: #bdc3c7;
+    --dark-color: black;
+    --light-color: #ecf0f1;
+    --danger-color: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+
+
+body {
+    width: 100vw;
+    min-width: 320px;
+    height: 100vh;
+    background-color: var(--dark-color);
+}
+
+.container {
+    margin: auto;
+    padding: 20px 10px 20px 10px;
+    max-width: 1200px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,23 @@
+<header class="header">
+    <img src="https://assets.pokemon.com/static2/_ui/img/favicon.ico" alt="logo" class="header__logo">
+    <h1 class="header__title">Pokédex</h1>
+    <div *ngIf="!poke; else elseBlock">
+        <h2>Loading ...</h2>
+    </div>
+</header>
+<main class="main">
+    <aside class="description">
+        <div class="description__title">
+            <span class="description__title__icon"><i class="fa-solid fa-fire-flame-curved fire" id="icon"></i></span>
+            <span class="description__title__name" id="title">Bulbasaur</span>
+        </div>
+        <div class="description__container">
+            <img src="./images/001.gif" alt="Pokemon" class="main__description__image" id="image">
+        </div>
+    </aside>
+</main>
+
+<ng-template #elseBlock>
+    <h3>{{poke?.name | titlecase}}</h3>
+    <img [src]="poke?.sprites?.other?.home?.front_default" [alt]="poke?.name">
+</ng-template>

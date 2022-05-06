@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CharizardComponent } from './basic/charizard/charizard.component';
+import { PokedexComponent } from './pokedex/pokedex.component';
 
 const routes: Routes = [
-  { path: 'basic/charizard', component: CharizardComponent },
-  {path: '**', redirectTo: 'basic/charizard'}
+  { path: 'pokedex', component: PokedexComponent },
+  {path: '**', redirectTo: 'pokedex'}
 ];
 
 @NgModule({
