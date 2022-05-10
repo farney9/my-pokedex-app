@@ -1,23 +1,52 @@
-<header class="header">
-    <img src="https://assets.pokemon.com/static2/_ui/img/favicon.ico" alt="logo" class="header__logo">
-    <h1 class="header__title">Pokédex</h1>
-    <div *ngIf="!poke; else elseBlock">
-        <h2>Loading ...</h2>
-    </div>
-</header>
-<main class="main">
-    <aside class="description">
-        <div class="description__title">
-            <span class="description__title__icon"><i class="fa-solid fa-fire-flame-curved fire" id="icon"></i></span>
-            <span class="description__title__name" id="title">Bulbasaur</span>
-        </div>
-        <div class="description__container">
-            <img src="./images/001.gif" alt="Pokemon" class="main__description__image" id="image">
-        </div>
-    </aside>
-</main>
+<div class="container">
+    <header class="header">
+        <img src="../../assets/pokeball.png" alt="logo" class="header__logo">
+        <h1 class="header__title">POKÉDEX</h1>
 
-<ng-template #elseBlock>
-    <h3>{{poke?.name | titlecase}}</h3>
-    <img [src]="poke?.sprites?.other?.home?.front_default" [alt]="poke?.name">
-</ng-template>
+    </header>
+    <main class="main">
+        <div *ngIf="!poke; else elseBlock">
+            <h2>Loading ...</h2>
+        </div>
+        <aside class="description">
+            <ng-template #elseBlock>
+
+                <h2 class="description__title">
+                    <span class="description__title__icon">
+                        <i class="fa-solid fa-fire-flame-curved fire" id="icon"></i>
+                    </span>
+                    {{poke?.name | titlecase}}
+                </h2>
+                <div class="description__container">
+                    <img class="description__image" id="image" [src]="poke?.sprites?.other?.home?.front_default"
+                        [alt]="poke?.name">
+                </div>
+            </ng-template>
+
+
+        </aside>
+        <article class="information">
+            <div class="information__group">
+                <span class="information__group__title">N°</span>
+                <span class="information__group__description" id="number">{{poke?.id}}</span>
+            </div>
+            <div class="information__group">
+                <span class="information__group__title">LEVEL</span>
+                <span class="information__group__description" id="number">{{poke?.base_experience}}</span>
+            </div>
+            <div class="information__group">
+                <span class="information__group__title">TYPE</span>
+                <span class="information__group__title" id="number">{{tipoPokemon}}</span>
+                <!-- <span class="information__group__title" id="number">{{poke?.types[0].type?.name}}</span> -->
+            </div>
+            <div class="information__group">
+                <span class="information__group__title">ABILITY</span>
+                <span class="information__group__title" id="number">{{ability}}</span>
+            </div>
+            <div class="information__group">
+                <span class="information__group__title">ABILITY</span>
+                <span class="information__group__title" id="number">{{ability}}</span>
+            </div>
+        </article>
+    </main>
+</div>
