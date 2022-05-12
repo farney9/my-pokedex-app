@@ -5,7 +5,7 @@
 
     </header>
     <main class="main">
-        <div *ngIf="!poke; else elseBlock">
+        <div *ngIf="!charizard; else elseBlock">
             <h2>Loading ...</h2>
         </div>
         <aside class="description">
@@ -15,38 +15,71 @@
                     <span class="description__title__icon">
                         <i class="fa-solid fa-fire-flame-curved fire" id="icon"></i>
                     </span>
-                    {{poke?.name | titlecase}}
+                    {{charizard?.name | titlecase}}
                 </h2>
-                <div class="description__container">
-                    <img class="description__image" id="image" [src]="poke?.sprites?.other?.home?.front_default"
-                        [alt]="poke?.name">
-                </div>
+
             </ng-template>
 
 
         </aside>
-        <article class="information">
-            <div class="information__group">
-                <span class="information__group__title">N°</span>
-                <span class="information__group__description" id="number">{{poke?.id}}</span>
+        <article *ngIf="charizard" class="information">
+            <div class="description__container">
+                <img class="description__image hvr-grow" id="image" [src]="charizard?.sprites?.other?.home?.front_default"
+                    [alt]="charizard?.name">
             </div>
-            <div class="information__group">
-                <span class="information__group__title">LEVEL</span>
-                <span class="information__group__description" id="number">{{poke?.base_experience}}</span>
-            </div>
-            <div class="information__group">
-                <span class="information__group__title">TYPE</span>
-                <span class="information__group__title" id="number">{{tipoPokemon}}</span>
-                <!-- <span class="information__group__title" id="number">{{poke?.types[0].type?.name}}</span> -->
-            </div>
-            <div class="information__group">
-                <span class="information__group__title">ABILITY</span>
-                <span class="information__group__title" id="number">{{ability}}</span>
-            </div>
-            <div class="information__group">
-                <span class="information__group__title">ABILITY</span>
-                <span class="information__group__title" id="number">{{ability}}</span>
+            <div class="details">
+                <div class="information__group">
+                    <span class="information__group__title">N°</span>
+                    <span class="information__group__description" id="number">00{{charizard.id}}</span>
+                </div>
+                <div class="information__group">
+                    <span class="information__group__title">LEVEL</span>
+                    <span class="information__group__description" id="number">{{charizard.base_experience}}</span>
+                </div>
+                <div class="information__group">
+                    <span class="information__group__title">TYPE</span>
+                    <span class="information__group__description" id="number">{{charizard.types[0].type.name}}</span>
+                </div>
+                <div class="information__group">
+                    <span class="information__group__title">ABILITY</span>
+                    <span class="information__group__description" id="number">{{charizard.abilities[0].ability.name}}</span>
+                </div>
+                <div class="information__group">
+                    <span class="information__group__title">HEIGHT</span>
+                    <span class="information__group__description" id="number">{{charizard.height}}</span>
+                </div>
+                <div class="information__group">
+                    <span class="information__group__title">weight</span>
+                    <span class="information__group__description" id="number">{{charizard.weight}}</span>
+                </div>
+
             </div>
         </article>
     </main>
+    <footer class="footer">
+        <h3 class="footer__title">Evolutions</h3>
+        <article class="footer__group">
+            <div *ngIf="charmander" class="footer__group__individual hvr-pulse-grow">
+                <img [src]="charmander?.sprites?.other?.home?.front_default" [alt]="charmander.name | titlecase"
+                    class="footer__group__individual__image" data-id="001">
+                <span class="information__group__title" id="number">{{charmander.name | titlecase}}</span>
+
+            </div>
+            <div *ngIf="charmeleon" class="footer__group__individual hvr-pulse-grow">
+                <img [src]="charmeleon?.sprites?.other?.home?.front_default" [alt]="charmeleon.name | titlecase"
+                    class="footer__group__individual__image" data-id="001">
+                <span class="information__group__title" id="number">{{charmeleon.name | titlecase}}</span>
+            </div>
+            <div *ngIf="charizard" class="footer__group__individual hvr-pulse-grow">
+                <img [src]="charizard?.sprites?.other?.home?.front_default" [alt]="charizard.name | titlecase"
+                    class="footer__group__individual__image" data-id="003">
+                <span class="information__group__title" id="number">{{charizard.name | titlecase}}</span>
+
+            </div>
+            <!-- <div class="footer__group__individual hvr-pulse-grow">
+                <img [src]="charizard?.sprites?.other?.home?.front_default" alt="Bulbasaur"
+                    class="footer__group__individual__image" data-id="004">
+            </div> -->
+        </article>
+    </footer>
 </div>

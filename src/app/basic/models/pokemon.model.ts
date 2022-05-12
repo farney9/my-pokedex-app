@@ -21,16 +21,23 @@ export interface Pokemon {
     weight:                   number;
 }
 
-export interface Ability {
-    ability:   Species;
-    is_hidden: boolean;
-    slot:      number;
+export interface Type {
+    slot: number;
+    type: Species;
 }
 
 export interface Species {
     name: string;
     url:  string;
 }
+
+export interface Ability {
+    ability:   Species;
+    is_hidden: boolean;
+    slot:      number;
+}
+
+
 
 export interface GameIndex {
     game_index: number;
@@ -170,7 +177,4 @@ export interface Stat {
     stat:      Species;
 }
 
-export interface Type {
-    slot: number;
-    type: Species;
-}
+

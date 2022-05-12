@@ -9,23 +9,40 @@ import { PokemonService } from '../basic/services/pokemon.service';
 })
 export class PokedexComponent implements OnInit {
 
-  poke?: Pokemon;
-
-  tipoPokemon: string = '';
-  ability: string = '';
+  charizard?: Pokemon;
+  charmander?: Pokemon;
+  charmeleon?: Pokemon;
 
   constructor( private readonly pokemonService:PokemonService) { }
 
   ngOnInit(): void {
-    this.pokemonService.getPokemon(6)
-      .subscribe(pokemon => {
-        this.poke = pokemon
-        this.tipoPokemon = this.poke.types[0].type.name;
-        this.ability = this.poke.abilities[0].ability.name;
-
-        console.log(this.poke.types[0].type.name);
-        
-      })
+      this.getCharmander(4);
+      this.getCharmeleon(5);
+      this.getCharizard(6);
   }
 
+
+  getCharmeleon(id: number) {
+    this.pokemonService.getPokemon(id)
+    .subscribe(resp => {
+      this.charmeleon = resp
+      console.log(this.charmeleon.name);
+    })
+  }
+
+  getCharmander(id: number) {
+    this.pokemonService.getPokemon(id)
+    .subscribe(resp => {
+      this.charmander = resp
+      console.log(this.charmander.name);
+    })
+  }
+
+  getCharizard(id: number) {
+    this.pokemonService.getPokemon(id)
+    .subscribe(resp => {
+      this.charizard = resp
+      console.log(this.charizard.name);
+    })
+  }
 }

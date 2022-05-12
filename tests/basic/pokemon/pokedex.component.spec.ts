@@ -1,12 +1,12 @@
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CharizardComponent } from '../../../src/app/basic/charizard/charizard.component';
 import { PokemonService } from '../../../src/app/basic/services/pokemon.service';
+import { PokedexComponent } from '../../../src/app/pokedex/pokedex.component';
 
-describe('CharizardComponent', () => {
-  let component: CharizardComponent;
-  let fixture: ComponentFixture<CharizardComponent>;
+describe('PokedexComponent', () => {
+  let component: PokedexComponent;
+  let fixture: ComponentFixture<PokedexComponent>;
   let compiled: HTMLElement;
   let service: PokemonService
   let httpMock: HttpTestingController;
@@ -14,7 +14,7 @@ describe('CharizardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CharizardComponent ],
+      declarations: [ PokedexComponent ],
       imports: [HttpClientTestingModule],
       providers: [PokemonService]
     })
@@ -22,12 +22,13 @@ describe('CharizardComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CharizardComponent);
+    fixture = TestBed.createComponent(PokedexComponent);
     component = fixture.componentInstance;
     service = TestBed.inject(PokemonService);
     httpMock = TestBed.inject(HttpTestingController)
     fixture.detectChanges();
     compiled = fixture.nativeElement;
+
   });
 
   test('should create', () => {
@@ -47,6 +48,7 @@ describe('CharizardComponent', () => {
 
   });
 
+  /*
   test('Debe cargar a Charizard inmediatamente', () => {
     const pokemonMock = {
       name: 'charizardo!!',
@@ -79,5 +81,5 @@ describe('CharizardComponent', () => {
     expect(img?.alt).toBe(pokemonMock.name);
 
   });
-
+*/
 });

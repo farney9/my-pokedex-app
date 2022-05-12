@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokedexComponent debe hacer match con el snapshot 1`] = `
+<div
+  id="root1"
+>
+  <div
+    class="container"
+  >
+    <header
+      class="header"
+    >
+      <img
+        alt="logo"
+        class="header__logo"
+        src="../../assets/pokeball.png"
+      />
+      <h1
+        class="header__title"
+      >
+        POKÉDEX
+      </h1>
+    </header>
+    <main
+      class="main"
+    >
+      <div>
+        <h2>
+          Loading ...
+        </h2>
+      </div>
+      
+      <aside
+        class="description"
+      >
+        
+      </aside>
+      
+    </main>
+    <footer
+      class="footer"
+    >
+      <h3
+        class="footer__title"
+      >
+        Evolutions
+      </h3>
+      <article
+        class="footer__group"
+      >
+        
+        
+        
+      </article>
+    </footer>
+  </div>
+</div>
+`;
