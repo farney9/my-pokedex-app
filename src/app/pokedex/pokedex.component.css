@@ -98,7 +98,11 @@
 }
 
 .information__group__title {
+}
+
+.information__group__description {
     font-weight: bold;
+
 }
 
 .footer {

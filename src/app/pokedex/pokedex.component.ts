@@ -34,7 +34,7 @@ export class PokedexComponent implements OnInit {
     this.pokemonService.getPokemon(id)
     .subscribe(resp => {
       this.charmander = resp
-      console.log(this.charmander.name);
+      console.log(this.charmander);
     })
   }
 

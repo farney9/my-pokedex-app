@@ -1,7 +1,9 @@
 <div class="container">
     <header class="header">
-        <img src="../../assets/pokeball.png" alt="logo" class="header__logo">
-        <h1 class="header__title">POKÉDEX</h1>
+        <figure>
+            <img src="../../assets/pokeball.png" alt="logo" class="header__logo mx-sm-2">
+        </figure>
+        <h1 class="header__title">POKÉDEX_</h1>
 
     </header>
     <main class="main">
@@ -12,7 +14,7 @@
             <ng-template #elseBlock>
 
                 <h2 class="description__title">
-                    <span class="description__title__icon">
+                    <span class="description__title__icon mx-sm-1">
                         <i class="fa-solid fa-fire-flame-curved fire" id="icon"></i>
                     </span>
                     {{charizard?.name | titlecase}}
@@ -24,8 +26,10 @@
         </aside>
         <article *ngIf="charizard" class="information">
             <div class="description__container">
-                <img class="description__image hvr-grow" id="image" [src]="charizard?.sprites?.other?.home?.front_default"
-                    [alt]="charizard?.name">
+                <figure>
+                    <img class="description__image hvr-grow" id="image" [src]="charizard?.sprites?.other?.home?.front_default"
+                        [alt]="charizard?.name">
+                </figure>
             </div>
             <div class="details">
                 <div class="information__group">
@@ -57,29 +61,24 @@
         </article>
     </main>
     <footer class="footer">
-        <h3 class="footer__title">Evolutions</h3>
+        <h3 class="footer__title">OTHERS</h3>
         <article class="footer__group">
             <div *ngIf="charmander" class="footer__group__individual hvr-pulse-grow">
                 <img [src]="charmander?.sprites?.other?.home?.front_default" [alt]="charmander.name | titlecase"
                     class="footer__group__individual__image" data-id="001">
-                <span class="information__group__title" id="number">{{charmander.name | titlecase}}</span>
-
             </div>
             <div *ngIf="charmeleon" class="footer__group__individual hvr-pulse-grow">
                 <img [src]="charmeleon?.sprites?.other?.home?.front_default" [alt]="charmeleon.name | titlecase"
                     class="footer__group__individual__image" data-id="001">
-                <span class="information__group__title" id="number">{{charmeleon.name | titlecase}}</span>
             </div>
             <div *ngIf="charizard" class="footer__group__individual hvr-pulse-grow">
                 <img [src]="charizard?.sprites?.other?.home?.front_default" [alt]="charizard.name | titlecase"
                     class="footer__group__individual__image" data-id="003">
-                <span class="information__group__title" id="number">{{charizard.name | titlecase}}</span>
-
             </div>
-            <!-- <div class="footer__group__individual hvr-pulse-grow">
+            <div class="footer__group__individual hvr-pulse-grow">
                 <img [src]="charizard?.sprites?.other?.home?.front_default" alt="Bulbasaur"
                     class="footer__group__individual__image" data-id="004">
-            </div> -->
+            </div>
         </article>
     </footer>
 </div>
