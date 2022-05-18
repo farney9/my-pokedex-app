@@ -10,54 +10,50 @@
         <div *ngIf="!charizard; else elseBlock">
             <h2>Loading ...</h2>
         </div>
-        <aside class="description">
-            <ng-template #elseBlock>
-
-                <h2 class="description__title">
-                    <span class="description__title__icon mx-sm-1">
-                        <i class="fa-solid fa-fire-flame-curved fire" id="icon"></i>
-                    </span>
-                    {{charizard?.name | titlecase}}
-                </h2>
-
-            </ng-template>
-
-
-        </aside>
-        <article *ngIf="charizard" class="information">
-            <div class="description__container">
-                <figure>
-                    <img class="description__image hvr-grow" id="image" [src]="charizard?.sprites?.other?.home?.front_default"
-                        [alt]="charizard?.name">
+        <ng-template #elseBlock>
+            <aside class="description">
+                <div class="description__title">
+                    <figure>
+                        <img src="../../assets/fire-logo.png" alt="logo" class="description__title__icon">
+                    </figure>
+                    <!-- <span class="description__title__icon mx-sm-1">
+                        <i class="fa-solid fa-fire-flame-curved fire"></i>
+                    </span> -->
+                    <span>{{charizard?.name | titlecase}}</span>
+                </div>
+                <figure class="description__container">
+                    <img class="description__image hvr-grow" id="image"
+                        [src]="charizard?.sprites?.other?.home?.front_default" [alt]="charizard?.name">
                 </figure>
-            </div>
-            <div class="details">
-                <div class="information__group">
-                    <span class="information__group__title">N°</span>
-                    <span class="information__group__description" id="number">00{{charizard.id}}</span>
-                </div>
-                <div class="information__group">
-                    <span class="information__group__title">LEVEL</span>
-                    <span class="information__group__description" id="number">{{charizard.base_experience}}</span>
-                </div>
-                <div class="information__group">
-                    <span class="information__group__title">TYPE</span>
-                    <span class="information__group__description" id="number">{{charizard.types[0].type.name}}</span>
-                </div>
-                <div class="information__group">
-                    <span class="information__group__title">ABILITY</span>
-                    <span class="information__group__description" id="number">{{charizard.abilities[0].ability.name}}</span>
-                </div>
-                <div class="information__group">
-                    <span class="information__group__title">HEIGHT</span>
-                    <span class="information__group__description" id="number">{{charizard.height}}</span>
-                </div>
-                <div class="information__group">
-                    <span class="information__group__title">weight</span>
-                    <span class="information__group__description" id="number">{{charizard.weight}}</span>
-                </div>
+            </aside>
+        </ng-template>
 
+        <article *ngIf="charizard" class="information">
+            <div class="information__group">
+                <span class="information__title">N°</span>
+                <span class="information__description" id="number">00{{charizard.id}}</span>
             </div>
+            <div class="information__group">
+                <span class="information__title">LEVEL</span>
+                <span class="information__description" id="number">{{charizard.base_experience}}</span>
+            </div>
+            <div class="information__group">
+                <span class="information__title">TYPE</span>
+                <span class="information__description" id="number">{{charizard.types[0].type.name}}</span>
+            </div>
+            <div class="information__group">
+                <span class="information__title">ABILITY</span>
+                <span class="information__description" id="number">{{charizard.abilities[0].ability.name}}</span>
+            </div>
+            <div class="information__group">
+                <span class="information__title">HEIGHT</span>
+                <span class="information__description" id="number">{{charizard.height}}</span>
+            </div>
+            <div class="information__group">
+                <span class="information__title">weight</span>
+                <span class="information__description" id="number">{{charizard.weight}}</span>
+            </div>
+
         </article>
     </main>
     <footer class="footer">
