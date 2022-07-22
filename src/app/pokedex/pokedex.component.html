@@ -59,22 +59,22 @@
     <footer class="footer">
         <h3 class="footer__title">OTHERS</h3>
         <article class="footer__group">
-            <div *ngIf="charmander" class="footer__group__individual hvr-pulse-grow">
+            <figure *ngIf="charmander" class="footer__group__individual hvr-pulse-grow">
                 <img [src]="charmander?.sprites?.other?.home?.front_default" [alt]="charmander.name | titlecase"
                     class="footer__group__individual__image" data-id="001">
-            </div>
-            <div *ngIf="charmeleon" class="footer__group__individual hvr-pulse-grow">
+            </figure>
+            <figure *ngIf="charmeleon" class="footer__group__individual hvr-pulse-grow">
                 <img [src]="charmeleon?.sprites?.other?.home?.front_default" [alt]="charmeleon.name | titlecase"
                     class="footer__group__individual__image" data-id="001">
-            </div>
-            <div *ngIf="charizard" class="footer__group__individual hvr-pulse-grow">
+            </figure>
+            <figure *ngIf="charizard" class="footer__group__individual hvr-pulse-grow">
                 <img [src]="charizard?.sprites?.other?.home?.front_default" [alt]="charizard.name | titlecase"
                     class="footer__group__individual__image" data-id="003">
-            </div>
-            <div class="footer__group__individual hvr-pulse-grow">
+            </figure>
+            <figure class="footer__group__individual hvr-pulse-grow">
                 <img [src]="charizard?.sprites?.other?.home?.front_default" alt="Bulbasaur"
                     class="footer__group__individual__image" data-id="004">
-            </div>
+            </figure>
         </article>
     </footer>
 </div>
