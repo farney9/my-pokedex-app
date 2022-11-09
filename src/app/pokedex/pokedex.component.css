@@ -106,9 +106,6 @@
     text-transform: uppercase;
 }
 
-
-
-
 .footer {
     background-color: var(--footer-color);
     height: 280px;
@@ -271,7 +268,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 1.3em;
+        font-size: 1.3rem;
     }
 
     .information__title {
