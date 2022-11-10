@@ -104,6 +104,8 @@
     margin-bottom: 20px;
     font-size: 1.1em;
     text-transform: uppercase;
+    /* border: 2px solid blue; */
+
 }
 
 .footer {
@@ -269,6 +271,7 @@
         justify-content: center;
         align-items: center;
         font-size: 1.3rem;
+        /* border: 2px solid red; */
     }
 
     .information__title {
