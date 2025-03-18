@@ -1,80 +1,85 @@
+<!-- cSpell:disable -->
 <div class="container">
-    <header class="header">
-        <figure>
-            <img src="./assets/pokeball.png" alt="logo" class="header__logo mx-sm-1">
-        </figure>
-        <h1 class="header__title">POKÉDEX_</h1>
+  <header class="header">
+    <figure>
+      <img src="./assets/pokeball.png" alt="logo" class="header__logo mx-sm-1">
+    </figure>
+    <h1 class="header__title">POKÉDEX_</h1>
 
-    </header>
-    <main class="main">
-        <div *ngIf="!charizard; else elseBlock">
-            <h2>Loading ...</h2>
-        </div>
-        <ng-template #elseBlock>
-            <aside class="description">
-                <div class="description__title">
-                    <figure>
-                        <img src="./assets/fire-logo.png" alt="logo" class="description__title__icon">
-                    </figure>
-                    <!-- <span class="description__title__icon mx-sm-1">
+  </header>
+  <main class="main">
+    <div *ngIf="!pichu; else elseBlock">
+      <h2 class="text-">Loading ...</h2>
+    </div>
+    <ng-template #elseBlock>
+      <aside class="description">
+        <div class="description__title">
+          <figure>
+            <img src="./assets/fire-logo.png" alt="logo" class="description__title__icon">
+          </figure>
+          <!-- <span class="description__title__icon mx-sm-1">
                         <i class="fa-solid fa-fire-flame-curved fire"></i>
                     </span> -->
-                    <span>{{charizard?.name | titlecase}}</span>
-                </div>
-                <figure class="description__container">
-                    <img class="description__image hvr-grow" id="image"
-                        [src]="charizard?.sprites?.other?.home?.front_default" [alt]="charizard?.name">
-                </figure>
-            </aside>
-        </ng-template>
+          <span>{{pichu?.name | titlecase}}</span>
+        </div>
+        <figure class="description__container">
+          <img class="description__image hvr-grow" id="image" [src]="pichu?.sprites?.other?.home?.front_default"
+            [alt]="pichu?.name">
+        </figure>
+      </aside>
+    </ng-template>
 
-        <article *ngIf="charizard" class="information">
-            <div class="information__group">
-                <span class="information__title">N°</span>
-                <span class="information__description" id="number">00{{charizard.id}}</span>
-            </div>
-            <div class="information__group">
-                <span class="information__title">LEVEL</span>
-                <span class="information__description" id="number">{{charizard.base_experience}}</span>
-            </div>
-            <div class="information__group">
-                <span class="information__title">TYPE</span>
-                <span class="information__description" id="number">{{charizard.types[0].type.name}}</span>
-            </div>
-            <div class="information__group">
-                <span class="information__title">ABILITY</span>
-                <span class="information__description" id="number">{{charizard.abilities[0].ability.name}}</span>
-            </div>
-            <div class="information__group">
-                <span class="information__title">HEIGHT</span>
-                <span class="information__description" id="number">{{charizard.height}}</span>
-            </div>
-            <div class="information__group">
-                <span class="information__title">weight</span>
-                <span class="information__description" id="number">{{charizard.weight}}</span>
-            </div>
+    <article *ngIf="pichu" class="information">
+      <div class="information__group">
+        <span class="information__title">N°</span>
+        <span class="information__description" id="number">00{{pichu.id}}</span>
+      </div>
+      <div class="information__group">
+        <span class="information__title">LEVEL</span>
+        <span class="information__description" id="number">{{pichu.base_experience}}</span>
+      </div>
+      <div class="information__group">
+        <span class="information__title">TYPE</span>
+        <span class="information__description" id="number">{{pichu.types[0].type.name}}</span>
+      </div>
+      <div class="information__group">
+        <span class="information__title">ABILITY</span>
+        <span class="information__description" id="number">{{pichu.abilities[0].ability.name}}</span>
+      </div>
+      <div class="information__group">
+        <span class="information__title">HEIGHT</span>
+        <span class="information__description" id="number">{{pichu.height / 10}} m </span>
+      </div>
+      <div class="information__group">
+        <span class="information__title">weight</span>
+        <span class="information__description" id="number">{{pichu.weight / 100 }} kg </span>
+      </div>
 
-        </article>
-    </main>
-    <footer class="footer">
-        <h3 class="footer__title">OTHERS</h3>
-        <article class="footer__group">
-            <figure *ngIf="charmander" class="footer__group__individual hvr-pulse-grow">
-                <img [src]="charmander?.sprites?.other?.home?.front_default" [alt]="charmander.name | titlecase"
-                    class="footer__group__individual__image" data-id="001">
-            </figure>
-            <figure *ngIf="charmeleon" class="footer__group__individual hvr-pulse-grow">
-                <img [src]="charmeleon?.sprites?.other?.home?.front_default" [alt]="charmeleon.name | titlecase"
-                    class="footer__group__individual__image" data-id="001">
-            </figure>
-            <figure *ngIf="charizard" class="footer__group__individual hvr-pulse-grow">
-                <img [src]="charizard?.sprites?.other?.home?.front_default" [alt]="charizard.name | titlecase"
-                    class="footer__group__individual__image" data-id="003">
-            </figure>
-            <figure class="footer__group__individual hvr-pulse-grow">
-                <img [src]="charizard?.sprites?.other?.home?.front_default" alt="Bulbasaur"
-                    class="footer__group__individual__image" data-id="004">
-            </figure>
-        </article>
-    </footer>
+    </article>
+  </main>
+  <footer class="footer">
+    <h3 class="footer__title">OTHERS</h3>
+    <article class="footer__group">
+      <figure *ngIf="charmander" class="footer__group__individual hvr-pulse-grow">
+        <img [src]="charmander?.sprites?.other?.home?.front_default" [alt]="charmander.name | titlecase"
+          class="footer__group__individual__image" data-id="001">
+        <span class="footer__caption">{{charmander.name | titlecase}}</span>
+      </figure>
+      <figure *ngIf="charmeleon" class="footer__group__individual hvr-pulse-grow">
+        <img [src]="charmeleon?.sprites?.other?.home?.front_default" [alt]="charmeleon.name | titlecase"
+          class="footer__group__individual__image" data-id="001">
+          <span class="footer__caption">{{charmeleon.name | titlecase}}</span>
+      </figure>
+      <figure *ngIf="charizard" class="footer__group__individual hvr-pulse-grow">
+        <img [src]="charizard?.sprites?.other?.home?.front_default" [alt]="charizard.name | titlecase"
+          class="footer__group__individual__image" data-id="003">
+          <span class="footer__caption">{{charizard.name | titlecase}}</span>
+      </figure>
+      <figure class="footer__group__individual hvr-pulse-grow">
+        <img [src]="charizard?.sprites?.other?.home?.front_default" alt="Bulbasaur"
+          class="footer__group__individual__image" data-id="004">
+          <span class="footer__caption">{{charizard?.name | titlecase}}</span>
+      </figure>
+    </article>
+  </footer>
 </div>

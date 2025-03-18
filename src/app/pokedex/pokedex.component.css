@@ -153,6 +153,10 @@
     padding: 15px 20px;
 }
 
+.main h2 {
+  color: #FFFFFF;
+}
+
 /*animations*/
 @-webkit-keyframes hvr-pulse-grow {
     to {
@@ -293,6 +297,12 @@
 
     .footer__title {
         flex-grow: 2;
+        color: #fff;
+    }
+    .footer__caption {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 100;
     }
 
     .footer__group {

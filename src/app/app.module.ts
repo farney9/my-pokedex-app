@@ -18,7 +18,6 @@ import { PokedexComponent } from './pokedex/pokedex.component';
     AppRoutingModule,
     HttpClientModule,
     CommonModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
